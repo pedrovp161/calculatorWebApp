@@ -1,0 +1,109 @@
+/* ===== ESTILO DA PÁGINA ===== */
+body {
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+
+    /* Centraliza a calculadora */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== CONTAINER PRINCIPAL (FORM) ===== */
+#Calculator {
+    display: flex;
+    flex-direction: column;   /* display em cima, botões embaixo */
+    align-items: center;
+
+    background-color: #2e2e2e;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* ===== DISPLAY ===== */
+#display {
+    width: 520px;
+    height: 90px;
+
+    margin-bottom: 15px;
+
+    text-align: right;
+    padding-right: 10px;
+
+    font-size: 44px;
+
+    border: none;
+    border-radius: 12px;
+    outline: none;
+
+    background: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+}
+
+/* ===== ÁREA DOS BOTÕES ===== */
+.buttons {
+    width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== CADA LINHA ===== */
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* ===== BOTÕES (GERAL) ===== */
+button {
+    height: 90px;
+
+    font-size: 40px;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+/* ===== BOTÕES NUMÉRICOS ===== */
+.number {
+    background-color: burlywood;
+}
+
+/* ===== BOTÕES ESPECIAIS ===== */
+.special {
+    background-color: aqua;
+    font-weight: bold;
+}
+
+.row:first-child .special {
+    grid-column: 3 / 5;
+    font-size: 40px;
+}
+
+/* ===== EFEITOS ===== */
+button:hover {
+    filter: brightness(0.7);
+}
+
+button:active {
+    transform: scale(0.90);
+}
